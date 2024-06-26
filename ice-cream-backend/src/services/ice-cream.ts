@@ -61,7 +61,6 @@ export const getRevenueContribution = async () => {
       }
     }
   ]);
-  console.log(overAllTotalRevenue, typeof overAllTotalRevenue)
 
   const items = await IceCream.aggregate([
     {
@@ -82,7 +81,7 @@ export const getRevenueContribution = async () => {
             {
               $divide: [
                 "$revenue",
-                overAllTotalRevenue[0].totalRevenue,
+                overAllTotalRevenue[0]?.totalRevenue,
               ]
             },
             100
