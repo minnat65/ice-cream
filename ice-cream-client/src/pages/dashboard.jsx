@@ -1,6 +1,7 @@
 import Card from '@mui/material/Card';
 import { useCallback, useEffect, useState } from 'react';
 import axios from 'axios';
+import './index.css';
 
 import Chart from "../components/dashboard/pie-chart";
 import VerticalBars from "../components/dashboard/vertical-bars";
@@ -30,17 +31,12 @@ const Dashboard = () => {
 
   return (
     <div 
-      style={{ 
-        display: 'flex', 
-        justifyContent: 'space-around', 
-        marginTop: '40px', 
-        width: '100vw',
-      }}
+      className='container'
     >
-      <Card style={{ width: '30%' }}>
+      <Card id="pie">
         <Chart data={revenueShare} />
       </Card>
-      <Card style={{ width: '60%' }}>
+      <Card id="bar">
         <VerticalBars data={monthlyRevenue} />
       </Card>
     </div>

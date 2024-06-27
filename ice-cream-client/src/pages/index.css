@@ -1,0 +1,20 @@
+.container {
+  display: flex; 
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 100vw;
+}
+
+#pie {
+  min-width: 400px
+}
+
+#bar {
+  width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .container { display: block; }
+  #pie { width: 100%;}
+  #bar { width: 100%;}
+}
