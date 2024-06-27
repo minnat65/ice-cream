@@ -32,18 +32,17 @@ const columns = [
   },
 ];
 
-export default function DataTable() {
+const DataTable = () => {
   const [data, setData] = useState([]);
 
-  const getAllIceCreamData = useCallback(async (page = 1, rowsPerPage = 5) => {
-    const URL = `${GET_ALL_DATA}?page=${page}&pageSize=${rowsPerPage}`
-    const {data} = await axios.get(URL);
+  const getAllIceCreamData = useCallback(async () => {
+    const {data} = await axios.get(GET_ALL_DATA);
 
     setData(data);
   }, []);
   useEffect(() => {
     getAllIceCreamData();
-  }, [getAllIceCreamData]);
+  }, []);
 
   return (
     <div style={{ height: 400, width: '100%' }}>
@@ -61,4 +60,6 @@ export default function DataTable() {
     </div>
   );
 }
+
+export default DataTable;
 

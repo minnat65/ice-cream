@@ -29,7 +29,14 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '40px', width: '100vw' }}>
+    <div 
+      style={{ 
+        display: 'flex', 
+        justifyContent: 'space-around', 
+        marginTop: '40px', 
+        width: '100vw',
+      }}
+    >
       <Card style={{ width: '30%' }}>
         <Chart data={revenueShare} />
       </Card>

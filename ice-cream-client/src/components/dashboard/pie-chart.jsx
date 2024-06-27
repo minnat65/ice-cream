@@ -6,7 +6,9 @@ import { PieChart } from '@mui/x-charts';
 const Chart = ({ data }) => {
   return (
     <>
-      <Typography style={{ fontWeight: 'bold', padding: 'auto' }}>Revenue Share (%)</Typography>
+      <Typography 
+        style={{ fontWeight: 'bold', display: 'flex', justifyContent: 'center' }}
+      >Revenue Share (%)</Typography>
       <PieChart
         series={[
           {
